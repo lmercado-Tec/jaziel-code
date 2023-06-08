@@ -8,12 +8,16 @@ def obtener_precios_activos(symbol, start_date, end_date):
     df = df[['Adj Close']].dropna()
     return df
 
+symbol = None
+start_date = None
+end_date = None
+
 # inputs
 symbol = st.text_input("Ingrese el símbolo del activo: ")
 start_date = st.text_input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
 end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 
-if end_date not None and start_date not None and symbol not None:
+if symbol not None and start_date not None and end_date not None:
     # Obtener los precios  y limpiar la base de datos
     precios = obtener_precios_activos(symbol, start_date, end_date)
 
