@@ -8,9 +8,9 @@ def obtener_precios_activos(symbol, start_date, end_date):
     return df
 
 # inputs
-symbol = input("Ingrese el símbolo del activo: ")
-start_date = input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
-end_date = input("Ingrese la fecha de fin (YYYY-MM-DD): ")
+symbol = st.text_input("Ingrese el símbolo del activo: ")
+start_date = st.text_input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
+end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 
 # Obtener los precios y limpiar la base de datos
 precios = obtener_precios_activos(symbol, start_date, end_date)
