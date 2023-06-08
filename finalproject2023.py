@@ -19,7 +19,7 @@ if st.button("Buscar"):
     ticker = yf.Ticker(symbol)
     
     # - accurate time-series count:
-    ticker_history = ticker.history(start=start_date, end=end_date).info
+    ticker_history = ticker.history(start=start_date, end=end_date)
     
     st.write(pd.DataFrame(ticker_history))
     
