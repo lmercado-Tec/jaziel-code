@@ -16,21 +16,20 @@ end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 if st.button("Buscar"):
     #df = yf.download(symbol, start=start_date, end=end_date)
     #precios = df[['Adj Close']].dropna()
-    ticker = yf.Ticker(symbol)
+    precios = yf.Ticker(symbol).history(start=start_date, end=end_date)
     
     # - accurate time-series count:
-    ticker_history = ticker.history(start=start_date, end=end_date)
-    st.write(start_date)
-    st.write(end_date)
-    st.write(ticker_history)
+    #precios = ticker.history(start=start_date, end=end_date)
+
+    st.write(precios)
     
     #Mostrar los primeros 5 y los últimos 5 datos
-    #primeros_5 = precios.head(5)
-    #ultimos_5 = precios.tail(5)
+    primeros_5 = precios.head(5)
+    ultimos_5 = precios.tail(5)
     
     # Mostrar los resultados
     st.write("\nPrimeros 5 datos:")
-   #st.write(primeros_5)
+    st.write(primeros_5)
 
     st.write("\nÚltimos 5 datos:")
     #st.write(ultimos_5)
