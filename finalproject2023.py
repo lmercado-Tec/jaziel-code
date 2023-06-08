@@ -21,6 +21,8 @@ if st.button("Buscar"):
     # - accurate time-series count:
     ticker.get_shares_full(start=start_date, end=end_date)
     
+    ticker
+    
     st.write(ticker)
     
     #Mostrar los primeros 5 y los últimos 5 datos
