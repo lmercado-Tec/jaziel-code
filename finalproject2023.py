@@ -14,10 +14,11 @@ start_date = st.text_input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
 end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 
 if st.button("Buscar"):
-    df = yf.download(symbol, start=start_date, end=end_date)
-    precios = df[['Adj Close']].dropna()
+    #df = yf.download(symbol, start=start_date, end=end_date)
+    #precios = df[['Adj Close']].dropna()
+    ticker = yf.Ticker(symbol)
     
-    st.write(precios)
+    st.write(ticker)
     
     #Mostrar los primeros 5 y los últimos 5 datos
     primeros_5 = precios.head(5)
