@@ -13,7 +13,7 @@ symbol = st.text_input("Ingrese el símbolo del activo: ")
 start_date = st.text_input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
 end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 
-if(end_date and start_date and symbol not None):
+if end_date not None and start_date not None and symbol not None:
     # Obtener los precios  y limpiar la base de datos
     precios = obtener_precios_activos(symbol, start_date, end_date)
 
