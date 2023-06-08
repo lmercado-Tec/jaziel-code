@@ -17,8 +17,8 @@ end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 precios = obtener_precios_activos(symbol, start_date, end_date)
 
 # Mostrar los primeros 5 y los últimos 5 datos
-primeros_5 = precios.head(5)
-ultimos_5 = precios.tail(5)
+#primeros_5 = precios.head(5)
+#ultimos_5 = precios.tail(5)
 
 # Mostrar los resultados
 st.write("\nPrimeros 5 datos:")
