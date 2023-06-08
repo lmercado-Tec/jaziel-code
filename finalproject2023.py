@@ -18,6 +18,9 @@ if st.button("Buscar"):
     #precios = df[['Adj Close']].dropna()
     ticker = yf.Ticker(symbol)
     
+    # - accurate time-series count:
+    ticker.get_shares_full(start=start_date, end=end_date)
+    
     st.write(ticker)
     
     #Mostrar los primeros 5 y los últimos 5 datos
