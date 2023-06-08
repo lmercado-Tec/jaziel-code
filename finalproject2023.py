@@ -19,9 +19,9 @@ if st.button("Buscar"):
     ticker = yf.Ticker(symbol)
     
     # - accurate time-series count:
-    ticker.history(start=start_date, end=end_date)
+    history = ticker.history(start=start_date, end=end_date).info
     
-    ticker
+    history
     
     st.write(ticker)
     
