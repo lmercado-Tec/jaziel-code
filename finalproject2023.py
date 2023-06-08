@@ -30,6 +30,8 @@ if st.button("Buscar"):
 
     st.write("\nÚltimos 5 datos:")
     st.write(ultimos_5)
+    
+    st.write(precios)
 
 #if symbol not None and start_date not None and end_date not None:
     # Obtener los precios  y limpiar la base de datos
