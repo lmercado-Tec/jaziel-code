@@ -18,7 +18,18 @@ start_date = st.text_input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
 end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 
 if st.button("Buscar"):
-    obtener_precios_activos(symbol, start_date, end_date)
+    precios = obtener_precios_activos(symbol, start_date, end_date)
+    
+    #Mostrar los primeros 5 y los últimos 5 datos
+    primeros_5 = precios.head(5)
+    ultimos_5 = precios.tail(5)
+    
+    # Mostrar los resultados
+    st.write("\nPrimeros 5 datos:")
+    st.write(primeros_5)
+
+    st.write("\nÚltimos 5 datos:")
+    st.write(ultimos_5)
 
 #if symbol not None and start_date not None and end_date not None:
     # Obtener los precios  y limpiar la base de datos
