@@ -1,5 +1,6 @@
 import pandas as pd
 import yfinance as yf
+import streamlit as st
 
 # para para descargar los datos y limpiarlos
 def obtener_precios_activos(symbol, start_date, end_date):
