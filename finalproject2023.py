@@ -19,7 +19,7 @@ if st.button("Buscar"):
     ticker = yf.Ticker(symbol)
     
     # - accurate time-series count:
-    ticker.get_shares_full(start=start_date, end=end_date)
+    ticker.history(start=start_date, end=end_date)
     
     ticker
     
