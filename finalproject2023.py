@@ -17,7 +17,7 @@ if st.button("Buscar"):
     #df = yf.download(symbol, start=start_date, end=end_date)
     #precios = df[['Adj Close']].dropna()
     precios = yf.Ticker(symbol).history(start=start_date, end=end_date)
-    data  = yf.Ticker(symbol).info
+    data  = yf.Ticker(symbol).shares
     st.write(data)
     # - accurate time-series count:
     #precios = ticker.history(start=start_date, end=end_date)
