@@ -19,9 +19,9 @@ if st.button("Buscar"):
     ticker = yf.Ticker(symbol)
     
     # - accurate time-series count:
-    tickerHistory = ticker.history(start=start_date, end=end_date).info
+    ticker_history = ticker.history(start=start_date, end=end_date).info
     
-    st.write(tickerHistory)
+    st.write(pd.DataFrame(ticker_history))
     
     #Mostrar los primeros 5 y los últimos 5 datos
     #primeros_5 = precios.head(5)
