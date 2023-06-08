@@ -22,7 +22,7 @@ ultimos_5 = precios.tail(5)
 
 # Mostrar los resultados
 st.write("\nPrimeros 5 datos:")
-st.write(primeros_5)
+#st.write(primeros_5)
 
 st.write("\nÚltimos 5 datos:")
-st.write(ultimos_5)
+#st.write(ultimos_5)
