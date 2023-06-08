@@ -20,7 +20,8 @@ if st.button("Buscar"):
     
     # - accurate time-series count:
     ticker_history = ticker.history(start=start_date, end=end_date)
-    
+    st.write(start_date)
+    st.write(end_date)
     st.write(ticker_history)
     
     #Mostrar los primeros 5 y los últimos 5 datos
