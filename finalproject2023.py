@@ -14,7 +14,8 @@ start_date = st.text_input("Ingrese la fecha de inicio (YYYY-MM-DD): ")
 end_date = st.text_input("Ingrese la fecha de fin (YYYY-MM-DD): ")
 
 if st.button("Buscar"):
-    precios = obtener_precios_activos(symbol, start_date, end_date)
+    df = yf.download(symbol, start=start_date, end=end_date)
+    precios = df[['Adj Close']].dropna()
     
     st.write(precios)
     
