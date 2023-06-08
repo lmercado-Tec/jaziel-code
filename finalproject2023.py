@@ -24,15 +24,15 @@ if st.button("Buscar"):
     st.write(ticker)
     
     #Mostrar los primeros 5 y los últimos 5 datos
-    primeros_5 = precios.head(5)
-    ultimos_5 = precios.tail(5)
+    #primeros_5 = precios.head(5)
+    #ultimos_5 = precios.tail(5)
     
     # Mostrar los resultados
     st.write("\nPrimeros 5 datos:")
-    st.write(primeros_5)
+   #st.write(primeros_5)
 
     st.write("\nÚltimos 5 datos:")
-    st.write(ultimos_5)
+    #st.write(ultimos_5)
     
     
 
